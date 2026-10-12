@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 260 260">
+  <title>Deep Breather — golden lungs</title>
+  <rect width="260" height="260" fill="#070d18"/>
+  <defs>
+    <linearGradient id="lungGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff0b0"/>
+      <stop offset="40%" stop-color="#eebf58"/>
+      <stop offset="75%" stop-color="#b87821"/>
+      <stop offset="100%" stop-color="#f7d77f"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(130 130) scale(0.82) translate(-130 -125)">
+    <path d="M113 48 C102 34 86 46 71 62 C46 88 26 132 24 179 C22 214 37 227 62 217 L104 200 C117 195 120 183 119 166 L117 65 Q117 53 113 48 Z M147 48 C158 34 174 46 189 62 C214 88 234 132 236 179 C238 214 223 227 198 217 L156 200 C143 195 140 183 141 166 L143 65 Q143 53 147 48 Z" fill="url(#lungGold)" stroke="#ffe3a0" stroke-width="1.5"/>
+    <path d="M130 28 L130 83 M130 78 Q114 100 88 115 M130 78 Q146 100 172 115 M88 115 L65 155 M88 115 L91 157 M172 115 L195 155 M172 115 L169 157 M65 155 L49 177 M65 155 L70 188 M195 155 L211 177 M195 155 L190 188" fill="none" stroke="#664319" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+    <path d="M130 28 L130 76" fill="none" stroke="#eebf58" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

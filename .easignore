@@ -1,0 +1,30 @@
+# EAS recreates native projects from app.json. Keep the upload to app sources.
+node_modules/
+.git/
+.expo/
+.idea/
+.claude/
+.codex/
+.agents/
+android/
+ios/
+android_old_skeleton_backup/
+DeepBreather-main/
+Claude outputs/
+docs/
+e2e/
+tests/
+dist/
+dist-test/
+dist-ios/
+releases/
+web-build/
+.env*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+legacy/
+.publish-work/

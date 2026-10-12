@@ -1,38 +1,48 @@
 {
-  "name": "deepbreather",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "name": "deep-breather",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "expo start",
+    "start:tunnel": "expo start --tunnel",
+    "web": "expo start --web",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "build:web": "expo export --platform web --clear --output-dir dist",
+    "serve:web": "node tools/serve-web.mjs dist",
+    "prebuild:android": "expo prebuild --platform android",
+    "apk": "node tools/build-android.mjs",
+    "audio": "python3 tools/generate-audio.py",
+    "lint": "expo lint",
+    "build:web:test": "cross-env EXPO_PUBLIC_TEST_TIMINGS=1 expo export --platform web --clear --output-dir dist-test",
+    "test:e2e": "cross-env DIST=dist-test node e2e/smoke.mjs",
+    "test": "npm run test:unit && npm run build:web:test && npm run test:e2e",
+    "test:unit": "node --experimental-vm-modules --test tests/session-storage.test.mjs",
+    "test:pacing": "node e2e/pacing.mjs",
+    "check:android": "node tools/build-android.mjs --check",
+    "icons": "node tools/generate-icons.mjs"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.15",
+    "@expo/ngrok": "^4.1.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "^57.0.8",
+    "expo-asset": "~57.0.16",
+    "expo-audio": "~57.0.3",
+    "expo-haptics": "~57.0.1",
+    "expo-keep-awake": "~57.0.1",
+    "expo-splash-screen": "~57.0.8",
+    "expo-system-ui": "~57.0.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "cross-env": "^10.1.0",
+    "playwright": "^1.56.0"
+  },
+  "private": true
 }

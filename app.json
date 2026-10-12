@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Deep Breather",
+    "slug": "deep-breather",
+    "description": "Guided Tummo breathing with an animated breath guide, generated ambient loops and local practice history.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#070d18",
+    "primaryColor": "#2f7fe0",
+    "icon": "./assets/icon.png",
+    "scheme": "deepbreather",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zachfarris.deepbreather",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.zachfarris.deepbreather",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#070d18"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "Deep Breather",
+      "shortName": "Breathe",
+      "themeColor": "#070d18",
+      "backgroundColor": "#070d18",
+      "description": "Guided breathing with golden lungs, ambient audio, and practice history stored on your device.",
+      "display": "standalone",
+      "orientation": "portrait",
+      "lang": "en"
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": true
+        }
+      ],
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#070d18",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain"
+        }
+      ]
+    ]
+  }
+}
